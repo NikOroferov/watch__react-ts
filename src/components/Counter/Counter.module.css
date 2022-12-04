@@ -1,0 +1,10 @@
+.counter__countainer{
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter__buttons{
+  display: flex;
+}
