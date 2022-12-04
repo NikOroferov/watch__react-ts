@@ -11,7 +11,7 @@ interface Props {
   initialOptionPos?: number;
 }
 
-export const Colorpicker = ({ options, initialOptionPos = 1 }: Props) => {
+export const ColorPicker = ({ options, initialOptionPos = 1 }: Props) => {
   const [activeOptionIndex, setActiveOptionIndex] = useState(initialOptionPos);
 
   const setActiveIndex = (index: number) => {
@@ -55,4 +55,4 @@ export const Colorpicker = ({ options, initialOptionPos = 1 }: Props) => {
     );
 }
 
-export default Colorpicker;
+export default ColorPicker;
