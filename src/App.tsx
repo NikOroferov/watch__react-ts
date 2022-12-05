@@ -5,6 +5,7 @@ import Counter from "./components/Counter/Counter";
 import CounterFn from "./components/Counter/CounterFn";
 import ColorPicker from "./components/Colorpiker/Colorpicker";
 import Form from "./components/Form/Form";
+import Todos from "./components/Todos/Todos";
 import './App.css'
 
 const colorPickerOptions = [
@@ -20,6 +21,18 @@ function App() {
     <>
       <nav className="navbar">
         <NavLink
+          to="/todos"
+          className="link"
+        >Todos</NavLink>
+        <NavLink
+          to="/form"
+          className="link"
+        >Form</NavLink>
+        <NavLink
+          to="/colorpicker"
+          className="link"
+        >ColorPicker</NavLink>
+        <NavLink
           to="/counter"
           className="link"
           >Counter</NavLink>
@@ -27,14 +40,6 @@ function App() {
           to="/fncounter"
           className="link"
           >CounterFn</NavLink>
-        <NavLink
-          to="/colorpicker"
-          className="link"
-        >ColorPicker</NavLink>
-        <NavLink
-          to="/form"
-          className="link"
-        >Form</NavLink>
       </nav>
 
 
@@ -58,6 +63,10 @@ function App() {
           <Route
             path="/form"
             element={<Form onSubmit={cred => console.log(cred)} />}
+          />
+          <Route
+            path="/todos"
+            element={<Todos/>}
           />
         </Routes>
       </div>

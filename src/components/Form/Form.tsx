@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import css from "./Form.module.css"
 
 interface Props{
@@ -9,6 +9,8 @@ const Form = ({onSubmit}: Props) => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const formRef = useRef(null);
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.currentTarget;
@@ -35,6 +37,7 @@ const Form = ({onSubmit}: Props) => {
     <form
       onSubmit={handleSubmit}
       className={css.form}
+      ref={formRef}
     >
       <label className={css.label}>
         Email:
