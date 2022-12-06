@@ -1,4 +1,5 @@
 import { useState } from "react"
+import css from "./Todos.module.css"
 
 interface Props{
   onSubmit: (message :string) => void;
@@ -18,8 +19,9 @@ const TodoEditor = ({onSubmit}: Props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={ css.editor} onSubmit={handleSubmit}>
       <textarea
+        className={css.textarea}
         value={message}
         onChange={handleChange}
         ></textarea>

@@ -1,3 +1,5 @@
+import css from "./Todos.module.css"
+
 interface Props{
   value: string;
   onChange: (filter: string) => void;
@@ -6,15 +8,13 @@ interface Props{
 const Filter = ({value, onChange}: Props) => {
   return (
     <div>
-      <p>
-        Filter by value
-      </p>
       <input
         name="filter"
         type="text"
-        placeholder="Filter todos"
+        placeholder="Filter todos by value"
         value={value}
-        onChange={(event)=> onChange(event.target.value)}
+        onChange={(event) => onChange(event.target.value)}
+        className={css.filter}
       />
     </div>
   )
